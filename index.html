@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Stopwatch</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>STOPWATCH</h1>
+
+        <div class="display" id="display">00:00:00</div>
+
+        <div class="controls">
+            <button id="startBtn" class="start-btn">Start</button>
+            <button id="pauseBtn" class="pause-btn" disabled>Pause</button>
+            <button id="resetBtn" class="reset-btn">Reset</button>
+            <button id="lapBtn" class="lap-btn" disabled>Lap</button>
+        </div>
+
+        <div class="laps-container">
+            <div class="laps-title">Lap Times</div>
+            <div id="lapsList">
+                <div class="no-laps">No lap times recorded yet</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

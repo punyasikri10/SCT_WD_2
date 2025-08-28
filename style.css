@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f172b8 0%, #b89ad9 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.display {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    font-family: 'Courier New', monospace;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgba(233, 188, 188, 0.5);
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    min-width: 100px;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.start-btn {
+    background: rgba(72, 187, 120, 0.8);
+    border-color: rgb(28, 207, 67);
+}
+
+.start-btn:hover {
+    background: rgba(72, 187, 120, 1);
+}
+
+.pause-btn {
+    background: rgba(20, 57, 137, 0.8);
+    border-color: rgb(47, 68, 162);
+}
+
+.pause-btn:hover {
+    background: rgb(160, 219, 168);
+}
+
+.reset-btn {
+    background: rgba(233, 117, 117, 0.8);
+    border-color: rgba(239, 68, 68, 1);
+}
+
+.reset-btn:hover {
+    background: rgb(213, 185, 91);
+}
+
+.lap-btn {
+    background: rgba(154, 187, 218, 0.8);
+    border-color: rgb(183, 184, 246);
+}
+
+.lap-btn:hover {
+    background: rgba(99, 102, 241, 1);
+}
+
+.laps-container {
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.laps-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.lap-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    animation: slideIn 0.3s ease;
+}
+
+.lap-time:last-child {
+    margin-bottom: 0;
+}
+
+.lap-number {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.lap-value {
+    font-weight: bold;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.no-laps {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Extra responsiveness */
+@media (max-width: 600px) {
+    .display {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .controls {
+        gap: 0.5rem;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        min-width: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .controls {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
