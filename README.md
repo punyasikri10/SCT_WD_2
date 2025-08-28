@@ -1,9 +1,9 @@
-Interactive Stop watch Web Application
+**Interactive Stop watch Web Application**
 
 An interactive and user-friendly stopwatch built as part of the *SkillCraft* program.  
 This project provides functionalities to start, pause, reset, and track lap times, allowing users to measure and record time intervals accuratel
 
- Features
+ *Features*
 
 - Start / Pause / Reset functionality  
 - Lap time tracking with a dynamic display  
@@ -12,7 +12,7 @@ This project provides functionalities to start, pause, reset, and track lap time
 - Built with HTML, CSS, and JavaScript
 
 
- Tech Stack
+ *Tech Stack*
 
 - HTML5 → Structure of the app  
 - CSS3 → Styling and layout  
